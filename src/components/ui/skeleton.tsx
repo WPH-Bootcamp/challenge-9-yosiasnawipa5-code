@@ -1,0 +1,16 @@
+// src/components/ui/skeleton.tsx
+import { cn } from '@/lib/utils';
+
+function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+  return (
+    <div
+      className={cn(
+        'animate-shimmer rounded-md bg-gradient-to-r from-muted via-[#2a2a2a] to-muted bg-[length:200%_100%]',
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+export { Skeleton };
